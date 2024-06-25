@@ -30,12 +30,12 @@ class Score:
     def __init__(self):
         self.fonto = pg.font.SysFont("hgp創英角ﾎﾟｯﾌﾟ体", 30)
         self.score = 0
-        self.img = self.fonto.render("スコア：" + str(self.score), 0, (0, 0, 225))
+        self.img = self.fonto.render(f"スコア：{self.score}", 0, (0, 0, 225))
         self.rct = self.img.get_rect()
         self.rct.center = 100, HEIGHT-50
 
     def update(self, screen:pg.Surface):
-        self.img = self.fonto.render("スコア：" + str(self.score), 0, (0, 0, 225))
+        self.img = self.fonto.render(f"スコア：{self.score}", 0, (0, 0, 225))
         screen.blit(self.img, self.rct)
         
 
